@@ -1,0 +1,107 @@
+# single inheritance  -- inherite from single parent
+class Father:
+    def house(self):
+        print("has house")
+
+class Son(Father):
+    def car(self):
+        print("has car")
+
+son_obj = Son()
+son_obj.house()
+son_obj.car()
+
+# milti level inheritance -- A class inherits from another class,which inturn inherits from another and this can go on
+class GrandParent:
+    def land(self):
+        print("has land")
+
+class Father(GrandParent):
+    def house(self):
+        print("has house")
+
+class Son(Father):
+    def car(self):
+        print("has car")
+
+son_obj = Son()
+son_obj.land()
+son_obj.house()
+son_obj.car()
+
+# multiple inheritance -- one class inherits from more than ane parent
+class GrandParent:
+    def land(self):
+        print("has land")
+
+class Father(GrandParent):
+    def house(self):
+        print("has house")
+
+class Mother:
+    def gold(self):
+        print("has gold")
+
+class Son(Father,Mother):
+    def car(self):
+        print("has car")
+
+son_obj = Son()
+son_obj.land()
+son_obj.house()
+son_obj.gold()
+son_obj.car()
+
+# hirarchal inheritance -- multiple classes inheriting from a superclass
+class GrandParent:
+    def land(self):
+        print("has land")
+
+class Father(GrandParent):
+    def house(self):
+        print("has house")
+
+class Mother:
+    def gold(self):
+        print("has gold")
+
+class Daughter(Father):
+    def business(self):
+        print("has business")
+
+class Son(Father):
+    def car(self):
+        print("has car")
+
+son_obj = Son()
+son_obj.land()
+son_obj.house()
+son_obj.car()
+
+daughter_obj = Daughter()
+daughter_obj.land()
+daughter_obj.house()
+daughter_obj.business()
+
+# hybrid inheritance -- combination of at least types types is called hybrid
+class A:
+    def feat1(self):
+        print("feature 1")
+
+class B(A):
+    def feat2(self):
+        print("feature 2")
+
+class C(A):
+    def feat3(self):
+        print("feature 3")
+
+class D(B,C):
+    def feat4(self):
+        print("feature 4")
+
+obj = D()
+obj.feat1()
+obj.feat2()
+obj.feat3()
+obj.feat4()
